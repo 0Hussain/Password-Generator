@@ -16,19 +16,9 @@ namespace Password
 
 		private void btnEnterLength_Click(object sender, EventArgs e)
 		{
-			txtResult.Text = Password();
-
-		}
-
-		public string Password()
-		{
-			string Result = string.Empty;
-			Random rn = new();
-			for(int i = 0; i < numericUpDownLength.Value; i++)
-			{
-				Result +=Creator[rn.Next(0,chars.Length)];
-			}
-			return Result;
+			Creator cr = new();
+			byte passLength = (byte)numericUpDownLength.Value;
+			txtResult.Text = cr.CreatFinallyPass(passLength);
 		}
 	}
 }

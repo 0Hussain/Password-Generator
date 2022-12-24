@@ -64,7 +64,7 @@
             0,
             0});
 			this.numericUpDownLength.Minimum = new decimal(new int[] {
-            8,
+            6,
             0,
             0,
             0});
@@ -72,7 +72,7 @@
 			this.numericUpDownLength.Size = new System.Drawing.Size(120, 23);
 			this.numericUpDownLength.TabIndex = 2;
 			this.numericUpDownLength.Value = new decimal(new int[] {
-            8,
+            6,
             0,
             0,
             0});
