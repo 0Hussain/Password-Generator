@@ -33,6 +33,8 @@
 			this.numericUpDownLength = new System.Windows.Forms.NumericUpDown();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtResult = new System.Windows.Forms.TextBox();
+			this.rdbtnMedium = new System.Windows.Forms.RadioButton();
+			this.rdbtnHard = new System.Windows.Forms.RadioButton();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownLength)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -80,7 +82,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(12, 67);
+			this.label2.Location = new System.Drawing.Point(12, 113);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(42, 15);
 			this.label2.TabIndex = 3;
@@ -89,17 +91,41 @@
 			// txtResult
 			// 
 			this.txtResult.ForeColor = System.Drawing.Color.RosyBrown;
-			this.txtResult.Location = new System.Drawing.Point(103, 64);
+			this.txtResult.Location = new System.Drawing.Point(103, 110);
 			this.txtResult.Name = "txtResult";
 			this.txtResult.ReadOnly = true;
 			this.txtResult.Size = new System.Drawing.Size(238, 23);
 			this.txtResult.TabIndex = 4;
 			// 
+			// rdbtnMedium
+			// 
+			this.rdbtnMedium.AutoSize = true;
+			this.rdbtnMedium.Checked = true;
+			this.rdbtnMedium.Location = new System.Drawing.Point(103, 52);
+			this.rdbtnMedium.Name = "rdbtnMedium";
+			this.rdbtnMedium.Size = new System.Drawing.Size(70, 19);
+			this.rdbtnMedium.TabIndex = 5;
+			this.rdbtnMedium.TabStop = true;
+			this.rdbtnMedium.Text = "Medium";
+			this.rdbtnMedium.UseVisualStyleBackColor = true;
+			// 
+			// rdbtnHard
+			// 
+			this.rdbtnHard.AutoSize = true;
+			this.rdbtnHard.Location = new System.Drawing.Point(103, 77);
+			this.rdbtnHard.Name = "rdbtnHard";
+			this.rdbtnHard.Size = new System.Drawing.Size(51, 19);
+			this.rdbtnHard.TabIndex = 6;
+			this.rdbtnHard.Text = "Hard";
+			this.rdbtnHard.UseVisualStyleBackColor = true;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(365, 102);
+			this.ClientSize = new System.Drawing.Size(365, 145);
+			this.Controls.Add(this.rdbtnHard);
+			this.Controls.Add(this.rdbtnMedium);
 			this.Controls.Add(this.txtResult);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.numericUpDownLength);
@@ -123,5 +149,7 @@
 		private NumericUpDown numericUpDownLength;
 		private Label label2;
 		private TextBox txtResult;
+		private RadioButton rdbtnMedium;
+		private RadioButton rdbtnHard;
 	}
 }
