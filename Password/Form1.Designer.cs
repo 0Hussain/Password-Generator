@@ -35,6 +35,8 @@
 			this.txtResult = new System.Windows.Forms.TextBox();
 			this.rdbtnMedium = new System.Windows.Forms.RadioButton();
 			this.rdbtnHard = new System.Windows.Forms.RadioButton();
+			this.btnCopy = new System.Windows.Forms.Button();
+			this.lblCopy = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDownLength)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -44,7 +46,7 @@
 			this.btnEnterLength.Name = "btnEnterLength";
 			this.btnEnterLength.Size = new System.Drawing.Size(98, 23);
 			this.btnEnterLength.TabIndex = 0;
-			this.btnEnterLength.Text = "Create";
+			this.btnEnterLength.Text = "Generate";
 			this.btnEnterLength.UseVisualStyleBackColor = true;
 			this.btnEnterLength.Click += new System.EventHandler(this.btnEnterLength_Click);
 			// 
@@ -119,11 +121,32 @@
 			this.rdbtnHard.Text = "Hard";
 			this.rdbtnHard.UseVisualStyleBackColor = true;
 			// 
+			// btnCopy
+			// 
+			this.btnCopy.Location = new System.Drawing.Point(296, 81);
+			this.btnCopy.Name = "btnCopy";
+			this.btnCopy.Size = new System.Drawing.Size(45, 23);
+			this.btnCopy.TabIndex = 7;
+			this.btnCopy.Text = "Copy";
+			this.btnCopy.UseVisualStyleBackColor = true;
+			this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
+			// 
+			// lblCopy
+			// 
+			this.lblCopy.AutoSize = true;
+			this.lblCopy.ForeColor = System.Drawing.Color.DarkGreen;
+			this.lblCopy.Location = new System.Drawing.Point(243, 85);
+			this.lblCopy.Name = "lblCopy";
+			this.lblCopy.Size = new System.Drawing.Size(0, 15);
+			this.lblCopy.TabIndex = 8;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(365, 145);
+			this.ClientSize = new System.Drawing.Size(365, 158);
+			this.Controls.Add(this.lblCopy);
+			this.Controls.Add(this.btnCopy);
 			this.Controls.Add(this.rdbtnHard);
 			this.Controls.Add(this.rdbtnMedium);
 			this.Controls.Add(this.txtResult);
@@ -151,5 +174,7 @@
 		private TextBox txtResult;
 		private RadioButton rdbtnMedium;
 		private RadioButton rdbtnHard;
+		private Button btnCopy;
+		private Label lblCopy;
 	}
 }

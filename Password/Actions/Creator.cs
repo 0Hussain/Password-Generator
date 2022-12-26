@@ -3,12 +3,12 @@ using Password;
 using System.Diagnostics.Metrics;
 using System.Reflection.Metadata.Ecma335;
 
-internal class Creator
+internal class MainGenerator
 {
-	public string CreatFinallyPass(byte passwordLength, byte level)
+	public string GenerateFinalPass(byte passwordLength, byte level)
 	{
 		MyRandom rm = new();
-		string finallyPass = string.Empty;
+		string finalPass = string.Empty;
 
 		string[] stringSource =
 		{
@@ -26,27 +26,27 @@ internal class Creator
 		};
 
 		_Recreat:
-		finallyPass = rm.CreatRandomPass(str, passwordLength);
+		finalPass = rm.CreatRandomPass(str, passwordLength);
 
 		//Medium:at least 2 lowercase alphabet
 		//Hard:at least 2 special character
 		switch (level)
 		{
 			case 1:
-				if (!IsStandard(finallyPass, stringSource[3]))
+				if (!IsStandard(finalPass, stringSource[3]))
 				{
 					goto _Recreat;
 				}
 				break;
 			case 2:
-				if (!IsStandard(finallyPass, stringSource[2]))
+				if (!IsStandard(finalPass, stringSource[2]))
 				{
 					goto _Recreat;
 				}
 				break;
 		}
 
-		return finallyPass;
+		return finalPass;
 
 	}
 	public bool IsStandard(string Pass, string characters)

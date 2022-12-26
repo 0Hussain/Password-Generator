@@ -14,12 +14,19 @@ namespace Password
 
 		private void btnEnterLength_Click(object sender, EventArgs e)
 		{
-			Creator cr = new();
+			lblCopy.Text = "";
+			MainGenerator cr = new();
 			//Password level =>medium:1,hard=>2
 			byte level =(byte)(rdbtnMedium.Checked == true ? 1 : 2);
 
 			byte passLength = (byte)numericUpDownLength.Value;
-			txtResult.Text = cr.CreatFinallyPass(passLength,level);
+			txtResult.Text = cr.GenerateFinalPass(passLength,level);
+		}
+
+		private void btnCopy_Click(object sender, EventArgs e)
+		{
+			Clipboard.SetText(txtResult.Text);
+			lblCopy.Text = "Copied!";
 		}
 	}
 }
